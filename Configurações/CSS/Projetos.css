@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400; 700&display=swap');
+#CorpoDaPaginaFundo {
+    background-color: rgb(184, 182, 178);
+}
+#Paleta{
+
+    background-color: #4d7558;
+    width: 200px;
+    height: 200px;
+}
+#game{
+
+    display: inline-block;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.2s linear; 
+}
+.container{
+
+    padding: 2.5rem 5%;
+}
+.container .projetos-base{
+
+    columns: 15rem 3;
+    gap: 1.4rem;
+}
+.container .projetos-base img{
+
+    width: 25%;
+    margin-bottom: 1rem;
+    border-radius: 0.7rem;
+    
+}
+.container .projetos-base #image-item-text{
+
+    position: fixed;
+    margin-left: 5%;
+    align-self: center;
+    font-size: 20px;
+    font-family: 'Play', serif;
+    
+}
+.container .projetos-base img:hover{
+
+    transform: scale(1.01);
+}
+header{
+
+    background-color: rgb(59, 59, 59);
+    box-shadow: 0px 3px 10px;
+}
+.projetos-base{
+
+
+    display: flex;
+
+}
+.nav-bar{
+
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 6rem;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo h1{
+
+    color: rgb(37, 37, 37);
+    background-color: rgb(77, 117, 88);
+    border-radius: 10px;
+}
+.nav-list{
+
+    display: flex;
+    align-items: center;
+}
+.nav-list ul{
+
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.nav-item{
+
+    margin: 0 15px;
+}
+.nav-link{
+
+    text-decoration: none;
+    font-size: 2rem;
+    color: rgb(186, 192, 170);
+}
+.botao-login button{
+
+    border: none;
+    background-color: #4d7558;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+.botao-login a{
+
+    text-decoration: none;
+    color: rgb(37, 37, 37);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.menu-mobile-icone{
+
+    display: none;
+}
+
+.mobile-menu{
+
+    display: none;
+}
+
+@media screen and (max-width: 780px){
+    
+    
+    .nav-bar{
+
+        padding: 1.5rem;
+    }
+
+    .nav-item{
+
+        display: none;
+    }
+    
+    .botao-login{
+
+        display: none;
+    }
+
+    .menu-mobile-icone{
+
+        display: block;
+    }
+    
+    .menu-mobile-icone button{
+
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .mobile-menu ul{
+
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .mobile-menu .nav-item{
+
+        display: block;
+        padding-top: 1.2rem;
+    }
+    .mobile-menu .botao-login{
+
+        display: block;
+        padding: 1rem 2rem;
+
+    }
+    .mobile-menu .botao-login button{
+
+        width: 100%;
+    }
+    .abrir{
+
+        display: block;
+    }
+}
