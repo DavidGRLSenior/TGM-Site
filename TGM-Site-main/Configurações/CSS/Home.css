@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400; 700&display=swap');
+#CorpoDaPaginaFundo {
+    background-color: rgb(184, 182, 178);
+}
+#Texto-1{
+
+
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Play', serif;
+}
+#Texto-2{
+
+    text-align: center;
+    font-size: 100px;
+    font-family: 'Play', serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.2s linear; 
+}
+
+header{
+
+    background-color: rgb(59, 59, 59);
+    box-shadow: 0px 3px 10px;
+}
+
+.nav-bar{
+
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 6rem;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo h1{
+
+    color: rgb(37, 37, 37);
+    background-color: rgb(77, 117, 88);
+    border-radius: 10px;
+}
+.nav-list{
+
+    display: flex;
+    align-items: center;
+}
+.nav-list ul{
+
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.nav-item{
+
+    margin: 0 15px;
+}
+.nav-link{
+
+    text-decoration: none;
+    font-size: 2rem;
+    color: rgb(186, 192, 170);
+}
+#drop a{
+    text-decoration: none;
+    font-size: 2rem;
+    color: rgb(186, 192, 170);
+}
+.dropdown-menu{
+    position: absolute;
+    box-shadow: 0 0 3px rgb(37, 37, 37);
+    background-color: rgb(37, 37, 37);
+    display: none;
+}
+.dropdown-menu a{
+    display: block;
+    color: rgb(37, 37, 37);
+}
+.dropdown:hover .dropdown-menu{
+    display: block;
+    text-align: center;
+    color: rgb(37, 37, 37);
+    top: 4rem;
+    left: auto;
+   
+}
+.botao-login button{
+
+    border: none;
+    background-color: #4d7558;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+.botao-login a{
+
+    text-decoration: none;
+    color: rgb(37, 37, 37);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.menu-mobile-icone{
+
+    display: none;
+}
+
+.mobile-menu{
+
+    display: none;
+}
+
+@media screen and (max-width: 780px){
+    
+    
+    .nav-bar{
+
+        padding: 1.5rem;
+    }
+
+    .nav-item{
+
+        display: none;
+    }
+    
+    .botao-login{
+
+        display: none;
+    }
+
+    .menu-mobile-icone{
+
+        display: block;
+    }
+    
+    .menu-mobile-icone button{
+
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .mobile-menu ul{
+
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .mobile-menu .nav-item{
+
+        display: block;
+        padding-top: 1.2rem;
+    }
+    .mobile-menu .botao-login{
+
+        display: block;
+        padding: 1rem 2rem;
+
+    }
+    .mobile-menu .botao-login button{
+
+        width: 100%;
+    }
+    .abrir{
+
+        display: block;
+    }
+}
