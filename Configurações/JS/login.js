@@ -20,8 +20,8 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 
     // Simulando um banco de dados de usuários
     const users = {
-        "admin": { password: "Indio_02162025", role: "admin" },
-        "dev1": { password: "GRLSenior_02162025", role: "dev" }
+        "Base-Adimin": { password: "ADM_02162025", role: "admin" },
+        "DEL-developer": { password: "DEL-Developer_02162025", role: "dev" }
     };
 
     if (users[username] && users[username].password === password) {
