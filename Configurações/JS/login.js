@@ -20,7 +20,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 
     // Simulando um banco de dados de usuários
     const users = {
-        "Adimin-Base": { password: "ADM_02162025", role: "admin" },
+        "Admin-Base": { password: "ADM_02162025", role: "admin" },
         "Dev-Senior": { password: "Dev_02162025", role: "dev" }
     };
 
