@@ -13,6 +13,26 @@ function MostrarMenu(){
     }
 }
 
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const username = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    // Simulando um banco de dados de usuários
+    const users = {
+        "admin": { password: "Indio_02162025", role: "admin" },
+        "dev1": { password: "GRLSenior_02162025", role: "dev" }
+    };
+
+    if (users[username] && users[username].password === password) {
+        localStorage.setItem("user", username);
+        sessionStorage.setItem("sessionActive", "true"); // Marca sessão ativa
+        atualizarLogin(); // Atualiza o botão de login
+    } else {
+        document.getElementById("error-message").innerText = "Usuário ou senha incorretos";
+    }
+});
+
 function atualizarLogin() {
     const user = localStorage.getItem("user");
     const loginButton = document.querySelector(".botao-login");
