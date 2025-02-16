@@ -20,8 +20,8 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 
     // Simulando um banco de dados de usuários
     const users = {
-        "Base-Adimin": { password: "ADM_02162025", role: "admin" },
-        "DEL-developer": { password: "DEL-Developer_02162025", role: "dev" }
+        "Adimin-Base": { password: "ADM_02162025", role: "admin" },
+        "Dev-Senior": { password: "Dev_02162025", role: "dev" }
     };
 
     if (users[username] && users[username].password === password) {
@@ -32,6 +32,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
         document.getElementById("error-message").innerText = "Usuário ou senha incorretos";
     }
 });
+
 
 function atualizarLogin() {
     const user = localStorage.getItem("user");
@@ -45,7 +46,7 @@ function atualizarLogin() {
     }
 
     if (user) {
-        loginButton.innerHTML = `<span>Bem-vindo, ${user}!</span> <button onclick="logout()">Sair</button>`;
+        loginButton.innerHTML = `<span> ${user} </span> <button onclick="logout()">Sair</button>`;
     } else {
         loginButton.innerHTML = `<a href="login.html">Login</a>`;
     }

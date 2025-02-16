@@ -13,6 +13,7 @@ function MostrarMenu(){
     }
 }
 
+
 function atualizarLogin() {
     const user = localStorage.getItem("user");
     const loginButton = document.querySelector(".botao-login");
@@ -25,7 +26,7 @@ function atualizarLogin() {
     }
 
     if (user) {
-        loginButton.innerHTML = `<span>Bem-vindo, ${user}!</span> <button onclick="logout()">Sair</button>`;
+        loginButton.innerHTML = `<span> ${user} </span> <button onclick="logout()">Sair</button>`;
     } else {
         loginButton.innerHTML = `<a href="login.html">Login</a>`;
     }
