@@ -27,10 +27,8 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     if (users[username] && users[username].password === password) {
         localStorage.setItem("user", username);
         sessionStorage.setItem("sessionActive", "true"); // Marca sessão ativa
-        atualizarLogin(); // Atualiza o botão de login
-    } else {
-        document.getElementById("error-message").innerText = "Usuário ou senha incorretos";
-    }
+        window.location.href = "admin.html"; // Redireciona para a página do painel
+    }  
 });
 
 
