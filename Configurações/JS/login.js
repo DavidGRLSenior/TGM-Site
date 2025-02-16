@@ -27,7 +27,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     if (users[username] && users[username].password === password) {
         localStorage.setItem("user", username);
         sessionStorage.setItem("sessionActive", "true"); // Marca sessão ativa
-        window.location.href = "admin.html"; // Redireciona para a página do painel
+        window.location.href = "login.html"; // Redireciona para a página do painel
     }  
 });
 
