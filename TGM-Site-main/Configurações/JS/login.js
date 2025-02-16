@@ -12,6 +12,26 @@ function MostrarMenu(){
         document.querySelector('.icon').src = "Itens do arquivo/Fechar_menu.svg"
     }
 }
+
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const username = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    // Simulando um banco de dados de usuários
+    const users = {
+        "Base-Admin": { password: "ADMIN_02162025", role: "admin" },
+        "Control-Dev": { password: "GRLSenior_02162025", role: "dev" }
+    };
+
+    if (users[username] && users[username].password === password) {
+        localStorage.setItem("user", username);
+        sessionStorage.setItem("sessionActive", "true"); // Marca sessão ativa
+        window.location.href = "admin.html"; // Redireciona para a página do painel
+    }
+    
+});
+
 function atualizarLogin() {
     const user = localStorage.getItem("user");
     const loginButton = document.querySelector(".botao-login");
